@@ -1,0 +1,27 @@
+6.21 LAB: Elements in a range
+
+import java.util.Scanner;
+
+public class ElementsInRange {
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      
+      int count = scanner.nextInt();
+        int[] numbers = new int[count];
+
+        for (int i = 0; i < count; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        int lowerBound = scanner.nextInt();
+        int upperBound = scanner.nextInt();
+
+        for (int number : numbers) {
+            if (number >= lowerBound && number <= upperBound) {
+                System.out.print(number + " ");
+            }
+        }
+        System.out.println();
+
+   }
+}
