@@ -1,0 +1,29 @@
+6.20 LAB: Contains the character
+
+import java.util.Scanner;
+
+public class ContainsTheCharacter {
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      
+      int numberOfWords = scanner.nextInt();
+
+        String[] words = new String[numberOfWords];
+
+        for (int i = 0; i < numberOfWords; i++) {
+            words[i] = scanner.next();
+        }
+
+        char searchChar = scanner.next().charAt(0);
+
+        String searchString = String.valueOf(searchChar);
+
+        for (String word : words) {
+
+            if (word.contains(searchString)) {
+                System.out.println(word);
+            }
+        }
+
+   }
+}
