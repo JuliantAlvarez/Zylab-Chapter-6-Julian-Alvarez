@@ -1,0 +1,24 @@
+6.19 LAB: Output values below an amount
+
+import java.util.Scanner; 
+
+public class OutputValuesBelow {
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      int[] userValues = new int[20];   // List of integers from input
+
+      int count = scanner.nextInt();
+        for (int i = 0; i < count; i++) {
+            userValues[i] = scanner.nextInt();
+        }
+
+        int threshold = scanner.nextInt();
+
+        for (int i = 0; i < count; i++) {
+            if (userValues[i] <= threshold) {
+                System.out.print(userValues[i] + " ");
+            }
+        }
+       System.out.println(); 
+   }
+}
