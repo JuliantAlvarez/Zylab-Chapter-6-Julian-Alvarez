@@ -1,0 +1,38 @@
+6.18 LAB: Middle item
+
+import java.util.Scanner; 
+
+public class MiddleItem {
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      int[] userValues = new int[9];  // Set of data specified by the user      
+
+     int count = 0; 
+
+        while (count < 9) {
+
+            int num = scanner.nextInt();
+
+            if (num < 0) {
+                break; 
+            }
+            userValues[count] = num;
+            count++;
+        }
+
+        if (count == 9 && scanner.hasNextInt()) { 
+            int nextNum = scanner.nextInt();
+            
+            if (nextNum >= 0) { 
+                System.out.println("Too many inputs");
+                return; 
+            }
+        }
+        if (count > 0) {
+
+            int middleIndex = (count - 1) / 2;
+
+            System.out.println(userValues[middleIndex]);
+        }
+   }
+}
